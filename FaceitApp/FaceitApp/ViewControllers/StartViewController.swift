@@ -12,13 +12,13 @@ class StartViewController: UIViewController {
     
     weak var appCoordinator: AppCoordinator?
     
-    let logoImageView: UIImageView = {
+    private let logoImageView: UIImageView = {
         let logoImageView = UIImageView(image: UIImage(named: "faceit-logo-bright"))
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
         return logoImageView
     }()
     
-    let playerNameTextField: UITextField = {
+    private let playerNameTextField: UITextField = {
         let playerNameTextField = UITextField()
         playerNameTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: playerNameTextField.frame.height))
         playerNameTextField.leftViewMode = .always
@@ -30,7 +30,7 @@ class StartViewController: UIViewController {
         return playerNameTextField
     }()
     
-    let searchButton: UIButton = {
+    private let searchButton: UIButton = {
         let searchButton = UIButton()
         searchButton.setTitle("Поиск...", for: .normal)
         searchButton.backgroundColor = .orange
@@ -51,17 +51,17 @@ class StartViewController: UIViewController {
 }
 
 extension StartViewController {
-    func setupView() {
+    private func setupView() {
         view.backgroundColor = .black
     }
     
-    func addSubviews() {
+    private func addSubviews() {
         view.addSubview(logoImageView)
         view.addSubview(playerNameTextField)
         view.addSubview(searchButton)
     }
     
-    func addSubviewsConstraints() {
+    private func addSubviewsConstraints() {
         logoImageView.bottomAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         logoImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6).isActive = true
@@ -78,7 +78,7 @@ extension StartViewController {
         searchButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05).isActive = true
     }
     
-    @objc func search() {
+    @objc private func search() {
         if playerNameTextField.text == "" {
             let alert = UIAlertController(title: "Ошибка", message: "Не введено имя!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Хорошо", style: .default))

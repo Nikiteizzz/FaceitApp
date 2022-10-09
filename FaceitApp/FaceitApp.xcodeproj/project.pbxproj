@@ -18,6 +18,7 @@
 		0A98843128EF33F2005D7333 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98843028EF33F2005D7333 /* Error.swift */; };
 		0A98843328F01EEC005D7333 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98843228F01EEC005D7333 /* UserInfoView.swift */; };
 		0A98843528F2C714005D7333 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98843428F2C714005D7333 /* Game.swift */; };
+		0A98843728F33550005D7333 /* GameInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98843628F33550005D7333 /* GameInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		0A98843028EF33F2005D7333 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		0A98843228F01EEC005D7333 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		0A98843428F2C714005D7333 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		0A98843628F33550005D7333 /* GameInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				0A98843228F01EEC005D7333 /* UserInfoView.swift */,
+				0A98843628F33550005D7333 /* GameInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				0A5A1F0328EE18F200BB6448 /* UserViewController.swift in Sources */,
 				0A98843528F2C714005D7333 /* Game.swift in Sources */,
+				0A98843728F33550005D7333 /* GameInfoView.swift in Sources */,
 				0A5A1F1928EEF96500BB6448 /* StartViewController.swift in Sources */,
 				0A98842F28EF2A14005D7333 /* UserData.swift in Sources */,
 				0A98843328F01EEC005D7333 /* UserInfoView.swift in Sources */,
