@@ -13,4 +13,5 @@ struct UserData: Codable {
     var nickname: String
     var steam_id_64: String
     var memberships: [String]
+    var games: [String: Game]
 }
