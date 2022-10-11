@@ -100,7 +100,6 @@ extension UserViewController {
                 return
             }
             let userData: UserData? = try? JSONDecoder().decode(UserData.self, from: data!)
-            print(userData)
             if userData == nil {
                 DispatchQueue.main.async {
                     self.gotError()

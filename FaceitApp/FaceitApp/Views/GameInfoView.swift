@@ -97,7 +97,7 @@ extension GameInfoView {
                             Регион: \(gameInfo.region)
                             Очки ello: \(gameInfo.faceit_elo)
                             ID игрока: \(gameInfo.game_player_id)
-                            Очки скилла: \(gameInfo.skill_level)
+                            Уровень FaceIT: \(gameInfo.skill_level)
                             """
         gameInfoLabel.isHidden = false
     }
