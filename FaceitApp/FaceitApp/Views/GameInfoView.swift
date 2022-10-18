@@ -69,35 +69,48 @@ extension GameInfoView {
     }
     
     private func addSubviewsConstraints() {
-        gameIconImageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        gameIconImageView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        gameIconImageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.2).isActive = true
-        gameIconImageView.heightAnchor.constraint(equalTo: gameIconImageView.widthAnchor).isActive = true
         
-        gameNameLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        gameNameLabel.leftAnchor.constraint(equalTo: gameIconImageView.rightAnchor, constant: 10).isActive = true
-        gameNameLabel.heightAnchor.constraint(equalTo: gameIconImageView.heightAnchor).isActive = true
-        gameNameLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.5).isActive = true
-        
-        ifNoGamesLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        ifNoGamesLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        ifNoGamesLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8).isActive = true
-        ifNoGamesLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.3).isActive = true
-        
-        gameInfoLabel.topAnchor.constraint(equalTo: gameIconImageView.bottomAnchor).isActive = true
-        gameInfoLabel.leftAnchor.constraint(equalTo: gameIconImageView.centerXAnchor).isActive = true
-        gameInfoLabel.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
-        gameInfoLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.3).isActive = true
+        gameIconImageView.snp.makeConstraints() {
+            element in
+            element.top.equalToSuperview()
+            element.left.equalToSuperview()
+            element.width.equalToSuperview().multipliedBy(0.2)
+            element.height.equalTo(snp.width).multipliedBy(0.2)
+        }
+
+        gameNameLabel.snp.makeConstraints() {
+            element in
+            element.top.equalToSuperview()
+            element.left.equalTo(gameIconImageView.snp.right).offset(10)
+            element.height.equalTo(gameIconImageView.snp.height)
+            element.width.equalToSuperview().multipliedBy(0.5)
+        }
+
+        ifNoGamesLabel.snp.makeConstraints() {
+            element in
+            element.top.equalTo(gameNameLabel.snp.bottom).offset(50)
+            element.centerX.equalToSuperview()
+            element.width.equalToSuperview().multipliedBy(0.8)
+            element.height.equalToSuperview().multipliedBy(0.3)
+        }
+
+        gameInfoLabel.snp.makeConstraints() {
+            element in
+            element.top.equalTo(gameIconImageView.snp.bottom).offset(10)
+            element.left.equalTo(gameIconImageView.snp.centerX)
+            element.width.equalToSuperview()
+            element.height.equalToSuperview().multipliedBy(0.3)
+        }
     }
     
     public func set(gameInfo: Game) {
         ifNoGamesLabel.isHidden = true
         gameInfoLabel.text = """
-                            Ник: \(gameInfo.game_player_name)
+                            Ник: \(gameInfo.gamePlayerName)
                             Регион: \(gameInfo.region)
-                            Очки ello: \(gameInfo.faceit_elo)
-                            ID игрока: \(gameInfo.game_player_id)
-                            Уровень FaceIT: \(gameInfo.skill_level)
+                            Очки ello: \(gameInfo.faceitElo)
+                            ID игрока: \(gameInfo.gamePlayerId)
+                            Уровень FaceIT: \(gameInfo.skillLevel)
                             """
         gameInfoLabel.isHidden = false
     }

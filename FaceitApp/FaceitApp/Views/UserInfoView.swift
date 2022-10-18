@@ -65,25 +65,37 @@ extension UserInfoView {
     }
     
     private func addViewConstraints() {
-        userNameLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        userNameLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 5).isActive = true
-        userNameLabel.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
-        userNameLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.23).isActive = true
+        userNameLabel.snp.makeConstraints() {
+            element in
+            element.top.equalToSuperview()
+            element.left.equalToSuperview().inset(5)
+            element.width.equalToSuperview()
+            element.height.equalToSuperview().multipliedBy(0.23)
+        }
         
-        countryLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor).isActive = true
-        countryLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 5).isActive = true
-        countryLabel.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
-        countryLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.23).isActive = true
+        countryLabel.snp.makeConstraints() {
+            element in
+            element.top.equalTo(userNameLabel.snp.bottom)
+            element.left.equalToSuperview().inset(5)
+            element.width.equalToSuperview()
+            element.height.equalToSuperview().multipliedBy(0.23)
+        }
         
-        steamID64Label.topAnchor.constraint(equalTo: countryLabel.bottomAnchor).isActive = true
-        steamID64Label.leftAnchor.constraint(equalTo: leftAnchor, constant: 5).isActive = true
-        steamID64Label.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
-        steamID64Label.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.23).isActive = true
-        
-        membershipsLabel.topAnchor.constraint(equalTo: steamID64Label.bottomAnchor).isActive = true
-        membershipsLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 5).isActive = true
-        membershipsLabel.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
-        membershipsLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.23).isActive = true
+        steamID64Label.snp.makeConstraints() {
+            element in
+            element.top.equalTo(countryLabel.snp.bottom)
+            element.left.equalToSuperview().inset(5)
+            element.width.equalToSuperview()
+            element.height.equalToSuperview().multipliedBy(0.23)
+        }
+
+        membershipsLabel.snp.makeConstraints() {
+            element in
+            element.top.equalTo(steamID64Label.snp.bottom)
+            element.left.equalToSuperview().inset(5)
+            element.width.equalToSuperview()
+            element.height.equalToSuperview().multipliedBy(0.23)
+        }
     }
     
     public func set(name: String, country: String, steamID64: String, memberships: [String]) {

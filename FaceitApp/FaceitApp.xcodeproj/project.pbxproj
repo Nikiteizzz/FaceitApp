@@ -14,11 +14,12 @@
 		0A5A1F1928EEF96500BB6448 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A1F1828EEF96500BB6448 /* StartViewController.swift */; };
 		0A5A1F1C28EEF98200BB6448 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A1F1B28EEF98200BB6448 /* Coordinator.swift */; };
 		0A5A1F1E28EEF9C800BB6448 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5A1F1D28EEF9C800BB6448 /* CoordinatorProtocol.swift */; };
+		0A977E2928FADFB90095F53F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A977E2828FADFB90095F53F /* NetworkManager.swift */; };
 		0A98842F28EF2A14005D7333 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98842E28EF2A14005D7333 /* UserData.swift */; };
-		0A98843128EF33F2005D7333 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98843028EF33F2005D7333 /* Error.swift */; };
 		0A98843328F01EEC005D7333 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98843228F01EEC005D7333 /* UserInfoView.swift */; };
 		0A98843528F2C714005D7333 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98843428F2C714005D7333 /* Game.swift */; };
 		0A98843728F33550005D7333 /* GameInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98843628F33550005D7333 /* GameInfoView.swift */; };
+		447C9B0BB894E52C9492BAF0 /* Pods_FaceitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98039D1C4285555EA6B84302 /* Pods_FaceitApp.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,11 +32,14 @@
 		0A5A1F1828EEF96500BB6448 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		0A5A1F1B28EEF98200BB6448 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		0A5A1F1D28EEF9C800BB6448 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		0A977E2828FADFB90095F53F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0A98842E28EF2A14005D7333 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		0A98843028EF33F2005D7333 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		0A98843228F01EEC005D7333 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		0A98843428F2C714005D7333 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		0A98843628F33550005D7333 /* GameInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoView.swift; sourceTree = "<group>"; };
+		19965E29BB849CFE795A8562 /* Pods-FaceitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceitApp.debug.xcconfig"; path = "Target Support Files/Pods-FaceitApp/Pods-FaceitApp.debug.xcconfig"; sourceTree = "<group>"; };
+		98039D1C4285555EA6B84302 /* Pods_FaceitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7CCAC0724100641B41097F1 /* Pods-FaceitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceitApp.release.xcconfig"; path = "Target Support Files/Pods-FaceitApp/Pods-FaceitApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				447C9B0BB894E52C9492BAF0 /* Pods_FaceitApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +59,8 @@
 			children = (
 				0A5A1EFD28EE18F200BB6448 /* FaceitApp */,
 				0A5A1EFC28EE18F200BB6448 /* Products */,
+				1A53A0DAE9D6ECDA928EF221 /* Pods */,
+				0CBF73B2BF613F39D4713494 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,8 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				0A98842E28EF2A14005D7333 /* UserData.swift */,
-				0A98843028EF33F2005D7333 /* Error.swift */,
 				0A98843428F2C714005D7333 /* Game.swift */,
+				0A977E2828FADFB90095F53F /* NetworkManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,6 +124,23 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		0CBF73B2BF613F39D4713494 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98039D1C4285555EA6B84302 /* Pods_FaceitApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1A53A0DAE9D6ECDA928EF221 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19965E29BB849CFE795A8562 /* Pods-FaceitApp.debug.xcconfig */,
+				C7CCAC0724100641B41097F1 /* Pods-FaceitApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A5A1F0F28EE18F700BB6448 /* Build configuration list for PBXNativeTarget "FaceitApp" */;
 			buildPhases = (
+				38A714C6B294AD49AA6840CD /* [CP] Check Pods Manifest.lock */,
 				0A5A1EF728EE18F200BB6448 /* Sources */,
 				0A5A1EF828EE18F200BB6448 /* Frameworks */,
 				0A5A1EF928EE18F200BB6448 /* Resources */,
+				7EE5D006E3C7ED4F262B1E7C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,6 +208,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		38A714C6B294AD49AA6840CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FaceitApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EE5D006E3C7ED4F262B1E7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceitApp/Pods-FaceitApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceitApp/Pods-FaceitApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceitApp/Pods-FaceitApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0A5A1EF728EE18F200BB6448 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -189,13 +257,13 @@
 			files = (
 				0A5A1F0328EE18F200BB6448 /* UserViewController.swift in Sources */,
 				0A98843528F2C714005D7333 /* Game.swift in Sources */,
+				0A977E2928FADFB90095F53F /* NetworkManager.swift in Sources */,
 				0A98843728F33550005D7333 /* GameInfoView.swift in Sources */,
 				0A5A1F1928EEF96500BB6448 /* StartViewController.swift in Sources */,
 				0A98842F28EF2A14005D7333 /* UserData.swift in Sources */,
 				0A98843328F01EEC005D7333 /* UserInfoView.swift in Sources */,
 				0A5A1F1E28EEF9C800BB6448 /* CoordinatorProtocol.swift in Sources */,
 				0A5A1F1C28EEF98200BB6448 /* Coordinator.swift in Sources */,
-				0A98843128EF33F2005D7333 /* Error.swift in Sources */,
 				0A5A1EFF28EE18F200BB6448 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +398,7 @@
 		};
 		0A5A1F1028EE18F700BB6448 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19965E29BB849CFE795A8562 /* Pods-FaceitApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -341,13 +410,15 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = KhoroshkoNikita.FaceitApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -361,6 +432,7 @@
 		};
 		0A5A1F1128EE18F700BB6448 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7CCAC0724100641B41097F1 /* Pods-FaceitApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -372,13 +444,15 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = KhoroshkoNikita.FaceitApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

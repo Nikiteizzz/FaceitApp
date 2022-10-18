@@ -9,8 +9,15 @@ import Foundation
 
 struct Game: Codable {
     var region: String
-    var game_player_id: String
-    var skill_level: Int
-    var faceit_elo: Int
-    var game_player_name: String
+    var gamePlayerId: String
+    var skillLevel: Int
+    var faceitElo: Int
+    var gamePlayerName: String
+    enum CodingKeys: String, CodingKey {
+        case region
+        case gamePlayerId = "game_player_id"
+        case skillLevel = "skill_level"
+        case faceitElo = "faceit_elo"
+        case gamePlayerName = "game_player_name"
+    }
 }

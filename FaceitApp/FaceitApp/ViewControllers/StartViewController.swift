@@ -7,6 +7,7 @@
 
 import UIKit
 import Foundation
+import SnapKit
 
 class StartViewController: UIViewController {
     
@@ -62,20 +63,27 @@ extension StartViewController {
     }
     
     private func addSubviewsConstraints() {
-        logoImageView.bottomAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        logoImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6).isActive = true
-        logoImageView.heightAnchor.constraint(equalTo: logoImageView.widthAnchor).isActive = true
+        logoImageView.snp.makeConstraints() {
+            element in
+            element.centerX.equalToSuperview()
+            element.bottom.equalTo(view.snp.centerY)
+            element.width.equalToSuperview().multipliedBy(0.6)
+        }
+
+        playerNameTextField.snp.makeConstraints() {
+            element in
+            element.center.equalTo(view.snp.center)
+            element.width.equalToSuperview().multipliedBy(0.7)
+            element.height.equalToSuperview().multipliedBy(0.06)
+        }
         
-        playerNameTextField.topAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        playerNameTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        playerNameTextField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7).isActive = true
-        playerNameTextField.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.06).isActive = true
-        
-        searchButton.topAnchor.constraint(equalTo: playerNameTextField.bottomAnchor, constant: 30).isActive = true
-        searchButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        searchButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5).isActive = true
-        searchButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05).isActive = true
+        searchButton.snp.makeConstraints() {
+            element in
+            element.top.equalTo(playerNameTextField.snp.bottom).offset(30)
+            element.centerX.equalToSuperview()
+            element.width.equalToSuperview().multipliedBy(0.5)
+            element.height.equalToSuperview().multipliedBy(0.05)
+        }
     }
     
     @objc private func search() {
