@@ -67,7 +67,7 @@ extension StartViewController {
             element in
             element.centerX.equalToSuperview()
             element.bottom.equalTo(view.snp.centerY)
-            element.width.equalToSuperview().multipliedBy(0.6)
+            element.height.width.equalTo(view.snp.width).multipliedBy(0.6)
         }
 
         playerNameTextField.snp.makeConstraints() {
